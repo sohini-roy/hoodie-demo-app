@@ -7,7 +7,7 @@ module.exports = function (server, options, next) {
   })
 
   .then(function (account) {
-    console.log('test account created')
+    console.log('test account created ' + account.username)
 
     return api.account(account.id).tokens.add({
       id: 'MY_SECRET_TOKEN',
